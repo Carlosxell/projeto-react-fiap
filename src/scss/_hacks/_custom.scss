@@ -1,0 +1,37 @@
+@import '../_utilities/_exports';
+
+$custom-file-text: (
+  placeholder: (
+    pt-br: 'Selecionar arquivo...',
+    pt: 'Selecionar arquivo...'
+  ),
+
+  button-label: (
+    pt-br: 'Navegar',
+    pt: 'Navegar'
+  )
+);
+
+.custom-file-input {
+  &:lang(pt-br),
+  &:lang(pt) {
+    ~ .custom-file-label::after {
+      content: '';
+    }
+  }
+}
+
+.custom-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+
+  &:focus,
+  &:hover {
+    text-decoration: none;
+  }
+}
