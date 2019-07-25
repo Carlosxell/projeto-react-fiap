@@ -1,1 +1,5 @@
 @import '../_utilities/_exports';
+
+.formContent {
+  max-width: pxToRem(768);
+}
