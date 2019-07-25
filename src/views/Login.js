@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, useState, useEffect } from 'react';
 import { Formik, Field } from 'formik';
 import { validationSchema } from '../helpers/validation'
-let yup = require('yup');
 
 const initState = {
   email: "",
