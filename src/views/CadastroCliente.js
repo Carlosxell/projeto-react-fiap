@@ -103,7 +103,7 @@ function CadastroCliente(props) {
                 </div>
 
                 <div className="d-inline-block">
-                  <a className="btn btn-sm btn-primary" href="../views/dashboard.html">Enviar Cadastro</a>
+                  <button className="btn btn-sm btn-primary" disabled={ !props.isValid } type="submit">Enviar Cadastro</button>
                 </div>
               </div>
             </div>
