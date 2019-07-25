@@ -1,6 +1,7 @@
 import React, { Component, useState, useEffect } from 'react';
 import { Formik, Field } from 'formik';
-import { validationSchema } from '../helpers/validation'
+import { validationSchema } from '../helpers/validation';
+import { Link } from "react-router-dom";
 
 function CadastroCliente(props) {
   return (
@@ -52,7 +53,7 @@ function CadastroCliente(props) {
       <div className="col-12">
         <div className="row no-gutters justify-content-end">
           <div className="d-inline-block">
-            <a className="btn btn-sm btn-outline-secondary mr-1" href="../index.html">Voltar</a>
+            <Link className="btn btn-sm btn-outline-secondary mr-1" to={ '/' }>Voltar</Link>
           </div>
 
           <div className="d-inline-block">

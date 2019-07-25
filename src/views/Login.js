@@ -1,6 +1,7 @@
 import React, { Component, useState, useEffect } from 'react';
 import { Formik, Field } from 'formik';
-import { validationSchema } from '../helpers/validation'
+import { validationSchema } from '../helpers/validation';
+import { Link } from "react-router-dom";
 
 const initState = {
   email: "",
@@ -44,7 +45,7 @@ function Login(props) {
           <div className="col-12">
             <div className="row no-gutters justify-content-end">
               <div className="d-inline-block">
-                <a className="btn btn-sm btn-link">Cadastrar</a>
+                <Link className="btn btn-sm btn-link" to={ '/cadastrar-cliente' }>Cadastrar</Link>
               </div>
 
               <div className="d-inline-block ml-1">
