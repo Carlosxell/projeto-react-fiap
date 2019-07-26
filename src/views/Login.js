@@ -1,6 +1,6 @@
 import React, { Component, useState, useEffect } from 'react';
 import { Formik, Field } from 'formik';
-import { validationSchema } from '../helpers/validation';
+import { loginSchema } from '../helpers/validation';
 import { Link } from "react-router-dom";
 
 const initState = {
@@ -9,10 +9,13 @@ const initState = {
 };
 
 function Login(props) {
-  let onSubmit = async (e, errors) => { console.info(errors.setErrors, 'deu certo'); };
+  let onSubmit = async (e) => {
+    console.info(e, 'deu certo');
+    return props.history.push(`/dashboard`);
+  };
 
   return (
-    <Formik initialValues={ initState } onSubmit={ onSubmit } validationSchema={ validationSchema }>
+    <Formik initialValues={ initState } onSubmit={ onSubmit } validationSchema={ loginSchema }>
       { props => (
         <form action="GET" autoComplete="off" className="formContent" noValidate onSubmit={ props.handleSubmit }>
           <div className="row">

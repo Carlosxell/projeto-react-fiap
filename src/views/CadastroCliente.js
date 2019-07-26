@@ -8,15 +8,19 @@ const initState = {
   name: "",
   email: "",
   password: "",
+  checkPassword: "",
 };
 
 function CadastroCliente(props) {
-  let onSubmit = async (e, errors) => { console.info(errors.setErrors, 'deu certo'); };
+  let onSubmit = async (e, errors) => {
+    console.info(e, 'deu certo');
+    return props.history.push(`/dashboard`);
+  };
 
   return (
     <Formik initialValues={ initState } onSubmit={ onSubmit } validationSchema={ validationSchema }>
       { props => (
-        <form action="GET" autoComplete="off" className="formContent" noValidate>
+        <form action="GET" autoComplete="off" className="formContent" noValidate onSubmit={ props.handleSubmit }>
           <div className="row">
             <div className="col-12">
               <div className="form-group">

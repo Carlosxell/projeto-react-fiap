@@ -4,6 +4,7 @@ import React from 'react';
 import Header from './components/Header/Header'
 import Login from './views/Login'
 import CadastroCliente from './views/CadastroCliente'
+import Dashboard from './views/Dashboard'
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 function App(props) {
@@ -16,6 +17,7 @@ function App(props) {
           <Switch>
             <Route component={ Login } exact path={ '/' } />
             <Route component={ CadastroCliente } exact path={ '/cadastrar-cliente' } />
+            <Route component={ Dashboard } exact path={ '/dashboard' } />
           </Switch>
         </BrowserRouter>
       </main>
